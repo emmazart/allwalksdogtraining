@@ -6,6 +6,13 @@ import Landing from './pages/Landing';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 
+const page = [
+  { 
+    page: 'About',
+    title: 'Training for dogs & their humans, from all walks of life.'
+  }
+];
+
 function App() {
   return (
     <Router>
@@ -16,7 +23,7 @@ function App() {
         />
         <Route 
           path="/about"
-          element={<About title="About" />}
+          element={<About title={page[0].title} />}
         />
         <Route 
           path="/services"
