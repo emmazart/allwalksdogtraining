@@ -1,12 +1,11 @@
 import React from 'react';
-import Nav from '../../components/Nav';
+import Header from '../../sections/Header';
 
-function Contact () {
+function Contact ({ title }) {
 
     return (
         <>
-        <Nav />
-        <h2>Contact</h2>
+        <Header title={title} />
         </>
     )
 }

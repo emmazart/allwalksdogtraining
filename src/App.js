@@ -16,15 +16,15 @@ function App() {
         />
         <Route 
           path="/about"
-          element={<About />}
+          element={<About title="About" />}
         />
         <Route 
           path="/services"
-          element={<Services />}
+          element={<Services title="Services" />}
         />
         <Route 
           path="/contact"
-          element={<Contact />}
+          element={<Contact title="Contact" />}
         />
       </Routes>
     </Router>

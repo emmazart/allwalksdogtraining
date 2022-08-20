@@ -1,12 +1,11 @@
 import React from 'react';
-import Nav from '../../components/Nav';
+import Header from '../../sections/Header';
 
-function Services () {
+function Services ({ title }) {
 
     return (
         <>
-        <Nav />
-        <h2>Services</h2>
+        <Header title={title} />
         </>
     )
 }

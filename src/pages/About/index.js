@@ -1,12 +1,14 @@
 import React from 'react';
-import Nav from '../../components/Nav';
+import Header from '../../sections/Header';
 
-function About () {
+// passing title props from Routing element on App.js through page 
+// to Header component to render page title dynamically
+
+function About ({ title }) {
 
     return (
         <>
-        <Nav />
-        <h2>About</h2>
+        <Header title={title} />
         </>
     )
 }
