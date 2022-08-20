@@ -20,7 +20,7 @@ const pages = [
     { name: 'Services', link: '/services' },
     { name: 'About', link: '/about' },
     { name: 'Contact', link: '/contact' },
-    { name: 'Blog', link: '/blog' },
+    // { name: 'Blog', link: '/blog' },
 ]
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
