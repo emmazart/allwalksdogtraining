@@ -9,7 +9,7 @@ function TestimonialCard({ client, highlight, reviewText }) {
     const theme = useTheme();
 
     return (
-        <Card sx={{ minWidth: 275, backgroundColor: `${theme.palette.primary.main}`}} >
+        <Card sx={{ m: 3, minWidth: 275, backgroundColor: `${theme.palette.primary.main}`}} >
         <CardContent>
           <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
             Testimonial
