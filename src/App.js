@@ -1,6 +1,7 @@
 import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import About from './pages/About';
 import Landing from './pages/Landing';
 import Services from './pages/Services';
@@ -13,8 +14,25 @@ const page = [
   }
 ];
 
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#6FD1D5", 
+      light: "#E5F2F0",
+      dark: "#5D9497"
+    },
+    secondary: {
+      main: "#02182B"
+    },
+    error: {
+      main: "#DB504A"
+    }
+  }
+})
+
 function App() {
   return (
+    <ThemeProvider theme={theme}>
     <Router>
       <Routes>
         <Route 
@@ -35,6 +53,7 @@ function App() {
         />
       </Routes>
     </Router>
+    </ThemeProvider>
   );
 }
 
