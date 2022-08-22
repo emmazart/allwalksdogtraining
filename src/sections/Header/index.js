@@ -1,13 +1,12 @@
 import * as React from 'react';
 import Nav from '../../components/Nav';
 
-// Props being passed down from App.js 
-function Header ({ title }) {
+// marginBottom property being used to prevent the header hiding content at top of page
+function Header () {
 
     return (
-        <header>
+        <header style={{ marginBottom: '90px' }}>
             <Nav />
-            <h1>{title}</h1>
         </header>
     )
 }

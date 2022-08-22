@@ -5,7 +5,8 @@ function Services ({ title }) {
 
     return (
         <>
-        <Header title={title} />
+        <Header />
+        <h1>{title}</h1>
         </>
     )
 }

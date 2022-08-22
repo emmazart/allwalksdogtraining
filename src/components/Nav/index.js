@@ -44,7 +44,7 @@ function Nav () {
 //   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="fixed">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
 
@@ -174,18 +174,4 @@ function Nav () {
   );
 };
 
-
 export default Nav;
-
-// import React from 'react';
-// import Button from '@mui/material/Button';
-
-
-// function Nav() {
-
-//     return (
-//         <Button variant="contained">Hello World</Button>
-//     )
-// };
-
-// export default Nav;

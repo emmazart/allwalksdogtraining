@@ -5,8 +5,10 @@ function Landing () {
 
     return (
         <>
-        <Nav />
-        <h2>Landing</h2>
+            <Nav />
+            <section style={{ marginTop: '80px' }}>
+                <h2>Landing</h2>
+            </section>
         </>
     )
 }

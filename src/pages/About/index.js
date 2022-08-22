@@ -10,7 +10,8 @@ import Button from '@mui/material/Button';
 function About({ title }) {
   return (
     <>
-      <Header title={title} />
+      <Header />
+      <h1>{title}</h1>
       <section>
         <h2>Hi, I'm Jaime!</h2>
         <p>

@@ -28,7 +28,7 @@ const theme = createTheme({
       main: "#DB504A"
     }
   }
-})
+});
 
 function App() {
   return (
