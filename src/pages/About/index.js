@@ -1,5 +1,8 @@
 import React from "react";
 import Header from "../../sections/Header";
+import { Link } from 'react-router-dom';
+import Button from '@mui/material/Button';
+
 
 // passing title props from Routing element on App.js through page
 // to Header component to render page title dynamically
@@ -67,6 +70,9 @@ function About({ title }) {
           Professional Dog Trainers.
         </p>
       </section>
+      <Button variant="contained" size="large" disableElevation component={Link} to="/contact">
+        Book Your Session
+      </Button>
     </>
   );
 }
