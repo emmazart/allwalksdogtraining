@@ -56,17 +56,20 @@ function ContactForm() {
         <CssBaseline />
         <Box
           sx={{
-            marginTop: 8,
+            marginTop: 5,
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+          {/* <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
             <LockOutlinedIcon />
-          </Avatar>
-          <Typography component="h1" variant="h5">
-            Sign in
+          </Avatar> */}
+          <Typography component="h2" variant="h5">
+            Have additional questions? <br /> Ready to schedule a session?
+          </Typography>
+          <Typography component="h3" variant="h7" sx={{ mt: '1rem' }}>
+            Please fill out the form below!
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
           <TextField
@@ -95,7 +98,6 @@ function ContactForm() {
               label="Email Address"
               name="email"
               autoComplete="email"
-              autoFocus
             />
             <TextField
               margin="normal"
@@ -105,7 +107,6 @@ function ContactForm() {
               label="Your Dog's Name"
               name="dogName"
               autoComplete="dogName"
-              autoFocus
             />
             <RadioList />
             <TextField
@@ -115,7 +116,6 @@ function ContactForm() {
               id="message"
               label="Message"
               name="message"
-              autoFocus
               multiline={true}
               rows={3}
             />

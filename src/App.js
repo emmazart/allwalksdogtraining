@@ -11,6 +11,10 @@ const page = [
   { 
     page: 'About',
     title: 'Training for dogs & their humans, from all walks of life.'
+  },
+  {
+    page: 'Contact',
+    title: "Let's get training!"
   }
 ];
 
@@ -49,7 +53,7 @@ function App() {
         />
         <Route 
           path="/contact"
-          element={<Contact title="Contact" />}
+          element={<Contact title={page[1].title} />}
         />
       </Routes>
     </Router>
