@@ -1,5 +1,14 @@
 import React, { useState } from 'react';
 import { validateEmail } from '../../utils/helpers';
+import Avatar from '@mui/material/Avatar';
+import Button from '@mui/material/Button';
+import CssBaseline from '@mui/material/CssBaseline';
+import TextField from '@mui/material/TextField';
+import Box from '@mui/material/Box';
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import RadioList from '../../components/RadioGroup';
 
 function ContactForm() {
 
@@ -42,46 +51,126 @@ function ContactForm() {
     }
 
     return(
-            <form id='contact-form' className="pt-2 mt-1" onSubmit={handleSubmit}>
 
-                {/* NAME INPUT */}
-                <div className='flex justify-between py-1 my-2'>
-                    <label className='mx-2'>Name:</label>
-                    <input 
-                        className="border rounded-md"
-                        type="text" name='name' defaultValue={name} onBlur={handleChange}>    
-                    </input>
-                </div>
+        <Container component="main" maxWidth="xs">
+        <CssBaseline />
+        <Box
+          sx={{
+            marginTop: 8,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
+        >
+          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+            <LockOutlinedIcon />
+          </Avatar>
+          <Typography component="h1" variant="h5">
+            Sign in
+          </Typography>
+          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+          <TextField
+              margin="normal"
+              required
+              name="firstName"
+              label="First Name"
+              type="firstName"
+              id="firstName"
+              sx={{ width: '48%', mr: '5px' }}
+            />
+            <TextField
+              margin="normal"
+              required
+              name="lastName"
+              label="Last Name"
+              type="lastName"
+              id="lastName"
+              sx={{ width: '49%', ml: '5px' }}
+            />
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              id="email"
+              label="Email Address"
+              name="email"
+              autoComplete="email"
+              autoFocus
+            />
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              id="dogName"
+              label="Your Dog's Name"
+              name="dogName"
+              autoComplete="dogName"
+              autoFocus
+            />
+            <RadioList />
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              id="message"
+              label="Message"
+              name="message"
+              autoFocus
+              multiline={true}
+              rows={3}
+            />
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              sx={{ mt: 3, mb: 2 }}
+            >
+              Submit
+            </Button>
+          </Box>
+        </Box>
+      </Container>
 
-                {/* EMAIL INPUT */}
-                <div className='flex justify-between py-1 my-2'>
-                    <label className='mx-2'>Email:</label>
-                    <input 
-                        className="border rounded-md"
-                        type='email' name='email' defaultValue={email} onBlur={handleChange}>
-                    </input>
-                </div>
+            // <form id='contact-form' className="pt-2 mt-1" onSubmit={handleSubmit}>
 
-                {/* MESSAGE INPUT */}
-                <div className='flex justify-between py-1 my-2'>
-                    <label className='mx-2'>Message:</label>
-                    <textarea 
-                        className="border rounded-md resize-none"
-                        name='message' rows='5' defaultValue={message} onBlur={handleChange}></textarea>
-                </div>
+            //     {/* NAME INPUT */}
+            //     <div className='flex justify-between py-1 my-2'>
+            //         <label className='mx-2'>Name:</label>
+            //         <input 
+            //             className="border rounded-md"
+            //             type="text" name='name' defaultValue={name} onBlur={handleChange}>    
+            //         </input>
+            //     </div>
 
-                {/* CONDITIONAL ERROR MESSAGE */}
-                {errorMessage && (
-                    <p className='my-1 py-1 italic text-tertiary font-bold'>{errorMessage}</p>
-                )}
+            //     {/* EMAIL INPUT */}
+            //     <div className='flex justify-between py-1 my-2'>
+            //         <label className='mx-2'>Email:</label>
+            //         <input 
+            //             className="border rounded-md"
+            //             type='email' name='email' defaultValue={email} onBlur={handleChange}>
+            //         </input>
+            //     </div>
 
-                {/* SUBMIT BUTTON */}
-                <button 
-                    className="bg-tangerine p-2 rounded-md" 
-                    data-testid='button' type='submit'>
-                    Submit
-                </button>
-            </form>
+            //     {/* MESSAGE INPUT */}
+            //     <div className='flex justify-between py-1 my-2'>
+            //         <label className='mx-2'>Message:</label>
+            //         <textarea 
+            //             className="border rounded-md resize-none"
+            //             name='message' rows='5' defaultValue={message} onBlur={handleChange}></textarea>
+            //     </div>
+
+            //     {/* CONDITIONAL ERROR MESSAGE */}
+            //     {errorMessage && (
+            //         <p className='my-1 py-1 italic text-tertiary font-bold'>{errorMessage}</p>
+            //     )}
+
+            //     {/* SUBMIT BUTTON */}
+            //     <button 
+            //         className="bg-tangerine p-2 rounded-md" 
+            //         data-testid='button' type='submit'>
+            //         Submit
+            //     </button>
+            // </form>
     )
 }
 
