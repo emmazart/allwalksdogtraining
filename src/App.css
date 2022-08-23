@@ -1,12 +1,5 @@
-* {
-  text-align: center;
-}
-
 body {
   padding: 1rem;
   margin: 1rem;
-}
-
-.pageTitle {
-  color: orange;
+  text-align: center;
 }
