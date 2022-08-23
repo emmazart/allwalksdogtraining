@@ -5,7 +5,7 @@ import FormLabel from "@mui/material/FormLabel";
 import Radio from "@mui/material/Radio";
 import FormControlLabel from '@mui/material/FormControlLabel';
 
-function RadioList() {
+function RadioList({ formState, setFormState }) {
 
     const services = [
         "Ask Me Anything",
@@ -13,7 +13,12 @@ function RadioList() {
         "Online Classes",
         "Outdoor Clinic",
         "Other"
-    ]
+    ];
+
+    function handleClick(e) {
+      e.preventDefault();
+      setFormState({...formState, choice: e.target.value })
+    }
 
   return (
     <FormControl sx={{ mt: '1rem' }}
@@ -26,7 +31,7 @@ function RadioList() {
       >
         {services.map((service, index) => {
             return (
-                <FormControlLabel key={index} value={service} control={<Radio />} label={service} />
+                <FormControlLabel key={index} value={service} control={<Radio />} label={service} onChange={handleClick}/>
                 )
         })}
       </RadioGroup>

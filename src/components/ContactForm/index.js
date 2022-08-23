@@ -14,8 +14,8 @@ function ContactForm() {
 
     // useState for setting error message and form data
     const [errorMessage, setErrorMessage] = useState('');
-    const [formState, setFormState] = useState({ name: '', email: '', message: ''});
-    const { name, email, message } = formState; // deconstruct formState to variables
+    const [formState, setFormState] = useState({ firstName: '', lastName: '', email: '', dogName: '', choice: '', message: ''});
+    const { firstName, lastName, email, dogName, choice, message } = formState; // deconstruct formState to variables
 
     // function runs on blur event of form elements
     function handleChange(e) {
@@ -28,7 +28,7 @@ function ContactForm() {
             } else {
                 setErrorMessage('');
             }
-        // if either of the other form elements have no content, set error message
+        // if any of the other form elements have no content, set error message
         } else {
             if (!e.target.value.length) {
                 setErrorMessage(`${e.target.name} is required.`)
@@ -71,7 +71,7 @@ function ContactForm() {
           <Typography component="h3" variant="h7" sx={{ mt: '1rem' }}>
             Please fill out the form below!
           </Typography>
-          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+          <Box id='contact-form' component="form" onSubmit={handleSubmit} sx={{ mt: 1 }}>
           <TextField
               margin="normal"
               required
@@ -79,6 +79,8 @@ function ContactForm() {
               label="First Name"
               type="firstName"
               id="firstName"
+              defaultValue={firstName} 
+              onBlur={handleChange}
               sx={{ width: '48%', mr: '5px' }}
             />
             <TextField
@@ -88,6 +90,8 @@ function ContactForm() {
               label="Last Name"
               type="lastName"
               id="lastName"
+              defaultValue={lastName} 
+              onBlur={handleChange}
               sx={{ width: '49%', ml: '5px' }}
             />
             <TextField
@@ -98,6 +102,8 @@ function ContactForm() {
               label="Email Address"
               name="email"
               autoComplete="email"
+              defaultValue={email} 
+              onBlur={handleChange}
             />
             <TextField
               margin="normal"
@@ -106,9 +112,9 @@ function ContactForm() {
               id="dogName"
               label="Your Dog's Name"
               name="dogName"
-              autoComplete="dogName"
+              defaultValue={dogName} onBlur={handleChange}
             />
-            <RadioList />
+            <RadioList formState={formState} setFormState={setFormState} />
             <TextField
               margin="normal"
               required
@@ -118,6 +124,8 @@ function ContactForm() {
               name="message"
               multiline={true}
               rows={3}
+              defaultValue={message} 
+              onBlur={handleChange}
             />
             <Button
               type="submit"
