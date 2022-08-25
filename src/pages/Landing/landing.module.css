@@ -1,4 +1,16 @@
 
+.hero {
+    background-color: #02182B;
+    padding: 3rem;
+    margin: 0;
+}
+
+.img {
+    transform: rotate(-30deg);
+    border-radius: 50%;
+    max-width: 250px;
+}
+
 .testimonials {
     width: 80%;
 }

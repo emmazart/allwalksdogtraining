@@ -107,7 +107,6 @@ function ContactForm() {
             />
             <TextField
               margin="normal"
-              required
               fullWidth
               id="dogName"
               label="Your Dog's Name"

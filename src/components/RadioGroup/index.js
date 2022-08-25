@@ -12,6 +12,7 @@ function RadioList({ formState, setFormState }) {
         "Initial Consult",
         "Online Classes",
         "Outdoor Clinic",
+        "General Inquiry",
         "Other"
     ];
 
@@ -23,10 +24,13 @@ function RadioList({ formState, setFormState }) {
   return (
     <FormControl sx={{ mt: '1rem' }}
     >
-      <FormLabel id="demo-radio-buttons-group-label">What service are you interested in?</FormLabel>
+      <FormLabel id="demo-radio-buttons-group-label" 
+        sx={{ fontSize: '22px', pb: 1.5 }}
+        >What service are you interested in?
+      </FormLabel>
       <RadioGroup
         aria-labelledby="demo-radio-buttons-group-label"
-        defaultValue="Other"
+        defaultValue="General Inquiry"
         name="radio-buttons-group"
       >
         {services.map((service, index) => {

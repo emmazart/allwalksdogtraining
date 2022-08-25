@@ -19,6 +19,10 @@ const page = [
   {
     page: 'Services',
     title: 'Training Services'
+  },
+  {
+    page: 'Landing',
+    title: 'Make the most out of life with your pup.'
   }
 ];
 
@@ -45,7 +49,7 @@ function App() {
       <Routes>
         <Route 
           path="/"
-          element={<Landing />}
+          element={<Landing title={page[3].title} />}
         />
         <Route 
           path="/about"

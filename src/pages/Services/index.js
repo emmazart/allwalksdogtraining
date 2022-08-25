@@ -84,9 +84,9 @@ function Services({ title }) {
       >
         Book Your Session
       </Button>
-      
-      <Typography component='p' variant='p' textAlign='left' sx={{ p: 2, color: `${theme.palette.primary.dark}`, fontSize: '14px' }}>Sliding scale pricing is available. Please send a note to allwalksdogtraining@gmail.com to inquire.</Typography>
-      <Typography component='p' variant='p' textAlign='left' sx={{ px: 2, color: `${theme.palette.primary.dark}`, fontSize: '14px' }}>Pay it Forward:  If you are interested in paying a little extra to support our sliding scale pricing, please ​indicate so when booking your session.</Typography>
+
+      <Typography component='p' variant='p' textAlign='left' sx={{ px: 2, pt: 3, color: `${theme.palette.primary.dark}`, fontSize: '14px' }}>Sliding scale pricing is available. Please send a note to allwalksdogtraining@gmail.com to inquire.</Typography>
+      <Typography component='p' variant='p' textAlign='left' sx={{ px: 2, pt: 1, color: `${theme.palette.primary.dark}`, fontSize: '14px' }}>Pay it Forward:  If you are interested in paying a little extra to support our sliding scale pricing, please ​indicate so when booking your session.</Typography>
     </>
   );
 }
