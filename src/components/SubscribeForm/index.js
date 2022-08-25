@@ -46,7 +46,7 @@ function SubscribeForm() {
 
     return(
 
-        <Container component="main" maxWidth="md">
+        <Container component="div" maxWidth="md">
         <CssBaseline />
         <Box
           sx={{
