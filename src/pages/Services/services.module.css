@@ -1,9 +1,6 @@
 
-/* @media only screen and (min-width: 768px) {
 
-} */
-
-@media only screen and (min-width: 980px) {
+@media only screen and (min-width: 900px) {
     .servicesContainer {
         display: flex;
         justify-content: center;

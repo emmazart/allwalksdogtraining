@@ -14,7 +14,7 @@ function Landing ({ title }) {
     return (
         <>
             <Nav />
-            <div style={{ marginTop: '60px' }}>
+            <div style={{ marginTop: '50px' }}>
             <Paper className={styles.hero}>
                 <img src='./images/astro-1-crop.jpeg' className={styles.img}></img>
             <Typography component="h1" variant="h2"
