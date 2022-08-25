@@ -15,6 +15,10 @@ const page = [
   {
     page: 'Contact',
     title: "Let's get training!"
+  },
+  {
+    page: 'Services',
+    title: 'Training Services'
   }
 ];
 
@@ -49,7 +53,7 @@ function App() {
         />
         <Route 
           path="/services"
-          element={<Services title="Services" />}
+          element={<Services title={page[2].title} />}
         />
         <Route 
           path="/contact"
