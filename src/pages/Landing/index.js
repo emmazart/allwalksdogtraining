@@ -23,6 +23,10 @@ function Landing ({ title }) {
         {title}
       </Typography>
             </Paper>
+            <Typography component='h2' variant='h3' sx={{ p: 2, mt: 2, color: `${theme.palette.primary.main}` }}>Training for dogs & their humans, from all walks of life.</Typography>
+            <Typography component='p' variant='p' sx={{ p: 1 }}>
+            Whether you're just starting to think about finding the right dog for your family or you have an older pup in need of some new tricks, finding the right trainer can make all the difference. To me, building a positive relationship and strengthening communication skills between you and your dog are the best foundation for making every walk a good one.
+            </Typography>
                 <Services />
                 <Testimonials className={styles.testimonials} />
             </div>
