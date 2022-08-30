@@ -18,6 +18,12 @@ Some CSS structured in modules.
 ## Deployed Application:
 Coming Soon.
 
+## Future Development:
+There are a few areas of future development I'd like to tackle once the front end is up and running:
+- Create a database and UI for the business owner to write and post blog posts
+- Have a section of the site that is password protected for clients to view extra blog posts and information
+- Once the DB is created, the contact emails will also funnel through that
+
 ## Standard Create-React-App README Info
 ### Getting Started with Create React App
 
