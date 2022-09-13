@@ -19,7 +19,7 @@ function Services() {
       {/* DIV FOR FLEXING TRAIL IMAGE AND TEXT */}
       <div className={styles.imgContainer}>
       <img src="./images/trail-crop-2.jpeg" className={styles.img}></img>
-      <Typography component="h3" variant="h4">
+      <Typography component="h3" variant="h4" sx={{ maxWidth: '380px' }}>
         Currently booking outdoor & online video conference sessions.
       </Typography>
       </div>

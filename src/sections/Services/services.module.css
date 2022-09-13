@@ -12,15 +12,16 @@
 .goalsContainer {
     display: flex;
     flex-direction: column;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .goal {
-    margin: 8px 0 8px 0;
+    margin: 8px auto 8px auto;
+    padding: 5px 0 5px 0;
     text-align: left;
-}
-
-.goalLeft {
-    text-align: right;
+    max-width: 800px;
 }
 
 .goal span {
@@ -46,13 +47,13 @@
     }
 
     .goal {
-        max-width: 600px;
+       padding: none;
     }
 
     .goalLeft {
         align-self: flex-end;
+        text-align: right;
     }
-
 
 }
 
